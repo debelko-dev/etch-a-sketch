@@ -19,8 +19,11 @@ function createGrid(grid){
         const block = document.createElement('div');
         block.classList.add('block');
         lineContainer.appendChild(block);
-
-        block.addEventListener('mouseover', (e) => e.target.style.backgroundColor = `rgb(${randomNumber()} ${randomNumber()} ${randomNumber()})`);
+        let darkness = 0.1;
+        block.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = `rgb(${randomNumber()} ${randomNumber()} ${randomNumber()} / ${darkness})`
+            if (darkness < 1) darkness += 0.1;
+        });
     }
 
 

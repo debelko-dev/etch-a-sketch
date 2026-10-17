@@ -4,7 +4,7 @@ const newGridBtn = document.querySelector('button');
 let grid = 16;
 
 newGridBtn.addEventListener('click', () => {
-    do {grid = +prompt('Enter a new size of grid: ', '')}while(grid < 1 || grid > 100);
+    do {grid = +prompt('Enter a new size of grid from 1 to 100: ', '')}while(grid < 1 || grid > 100);
     clearGrid();
     createGrid(grid);
 });

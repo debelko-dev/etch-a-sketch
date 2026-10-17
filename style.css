@@ -3,22 +3,32 @@ body{
     display: flex;
     align-items:  center;
     flex-direction: column;
+    gap: 10px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 900px;
-    height: 900px;
+    width: 850px;
+    height: 850px;
+    border: 2px solid black;
 }
 
 .block {
     background-color: white;
-    border: 1px solid #000000;
+    border: 1px solid #00000017;
     flex: 1;
 }
 
 .lineContainer{
     display: flex;
     flex: 1;
+}
+
+.block:hover{
+    background-color: black;
+}
+
+h1 {
+    margin: 0;
 }

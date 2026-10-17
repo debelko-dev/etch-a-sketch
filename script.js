@@ -20,7 +20,7 @@ function createGrid(grid){
         block.classList.add('block');
         lineContainer.appendChild(block);
 
-        block.addEventListener('mouseover', (e) => e.target.style.backgroundColor = 'black');
+        block.addEventListener('mouseover', (e) => e.target.style.backgroundColor = `rgb(${randomNumber()} ${randomNumber()} ${randomNumber()})`);
     }
 
 
@@ -31,4 +31,11 @@ function createGrid(grid){
 function clearGrid(){
     container.replaceChildren();
 }
+
 createGrid(grid);
+
+function randomNumber(){
+    return Math.random() * 256 - 1;
+}
+
+//rgb(186 218 85 / 0.4)
